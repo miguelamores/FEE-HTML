@@ -1,0 +1,14 @@
+{
+  "name": "verndale-fee-html-test",
+  "version": "1.0.0",
+  "description": "HTML-test",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "miguelamores",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
