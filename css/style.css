@@ -1,7 +1,7 @@
 :root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #ff3366;
-  --color-primary-dark: #ba265d;
+  --color-primary: deepskyblue;
+  --color-primary-light: aqua;
+  --color-secondary-dark: yellowgreen;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --line: 1px solid var(--color-grey-light-2); }
@@ -26,21 +26,40 @@ html {
 body {
   min-height: 100vh; }
 
+.secondary-text-color {
+  color: black !important; }
+
+.secondary-background {
+  background-color: yellow !important;
+  border: 0.8rem solid var(--color-secondary-dark) !important; }
+
+.secondary-border {
+  border: 0.8rem solid var(--color-secondary-dark); }
+
 .card {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-  background-color: cornflowerblue;
-  padding: 2rem; }
+  background-color: var(--color-primary);
+  padding: 2rem;
+  border: 0.8rem solid var(--color-primary-light); }
   .card__title {
     color: white;
     text-transform: uppercase;
     font-size: 2rem;
-    font-family: Arial; }
+    font-family: Arial;
+    font-weight: 600;
+    word-spacing: 0.4rem; }
   .card__body {
     padding-top: 1rem; }
+    .card__body__items {
+      display: grid;
+      row-gap: 1rem; }
+      .card__body__items > * {
+        text-decoration: underline; }
   .card__paragraph {
     padding-top: 1rem;
     font-size: 1.6rem;
+    line-height: 2.5rem;
     color: white; }
   .card__img {
     display: block;
@@ -49,7 +68,11 @@ body {
   .card__button {
     justify-self: end;
     align-self: end;
-    grid-row: 3 / -1; }
+    border: none;
+    padding: 0.7rem 2.2rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-weight: 700; }
 
 .container {
   display: grid;
