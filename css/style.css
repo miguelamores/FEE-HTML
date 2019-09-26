@@ -1,10 +1,7 @@
 :root {
   --color-primary: deepskyblue;
   --color-primary-light: aqua;
-  --color-secondary-dark: yellowgreen;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
-  --line: 1px solid var(--color-grey-light-2); }
+  --color-secondary-dark: yellowgreen; }
 
 * {
   margin: 0;
@@ -19,12 +16,12 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 68.75em) {
+  @media only screen and (max-width: 52.3em) {
     html {
-      font-size: 50%; } }
+      font-size: 45%; } }
 
 body {
-  min-height: 100vh; }
+  max-height: 100vh; }
 
 .secondary-text-color {
   color: black !important; }
@@ -79,14 +76,56 @@ body {
     padding: 0.7rem 2.2rem;
     text-transform: uppercase;
     color: var(--color-primary);
-    font-weight: 700; }
-    @media only screen and (max-width: 48em) {
+    font-weight: 700;
+    font-size: 1.4rem; }
+    @media only screen and (max-width: 52.3em) {
       .card__button {
         width: 100%; } }
+
+.brands {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(5rem, 1fr));
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 3rem;
+  align-items: center;
+  padding: 3rem 0; }
+  @media only screen and (max-width: 52.3em) {
+    .brands {
+      grid-template-columns: repeat(5, minmax(14rem, 1fr));
+      column-gap: 1rem; } }
+  .brands__title {
+    grid-column: 1 / -1;
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 1.6rem; }
+  .brands__logo {
+    display: block;
+    width: 100%; }
+  .brands__citibank {
+    justify-self: start; }
+  .brands__msg {
+    justify-self: center; }
+  .brands__polar {
+    justify-self: center;
+    width: 5.4rem;
+    height: 4.8rem; }
+  .brands__verndale {
+    justify-self: center; }
+  .brands__seven {
+    justify-self: end;
+    width: 6.3rem;
+    height: 5.1rem; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 10rem;
+  background-color: white; }
+  @media only screen and (max-width: 52.3em) {
+    .main {
+      padding: 3rem 1rem; } }
 
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  column-gap: 2rem;
-  padding: 3rem;
-  background-color: aquamarine; }
+  column-gap: 2rem; }
