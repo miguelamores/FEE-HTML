@@ -5,8 +5,12 @@
   padding: 2rem;
   border: 0.8rem solid var(--color-primary-light);
 
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+
   &__title {
-    color: white;
+    color: var(--color-white);
     text-transform: uppercase;
     font-size: 2rem;
     font-family: Arial;
@@ -20,7 +24,7 @@
     &__items {
       & > * {
         text-decoration: underline;
-        text-decoration-color: var(--color-primary-light);
+        text-decoration-color: var(--color-underline-blue);
       }
       display: grid;
       row-gap: 1rem;
@@ -33,6 +37,11 @@
     line-height: 2.5rem;
     color: white;
     opacity: 0.9;
+
+    &--underline {
+      text-decoration: underline;
+      text-decoration-color: var(--color-underline-blue);
+    }
   }
 
   &__img {

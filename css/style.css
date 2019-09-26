@@ -1,7 +1,11 @@
 :root {
-  --color-primary: deepskyblue;
-  --color-primary-light: aqua;
-  --color-secondary-dark: yellowgreen; }
+  --color-primary: #009efa;
+  --color-primary-light: #2ba6f0;
+  --color-secondary-light: #d4df24;
+  --color-secondary-dark: #e0ec24;
+  --color-underline-blue: #6bb1db;
+  --color-black: #000000;
+  --color-white: #ffffff; }
 
 * {
   margin: 0;
@@ -19,23 +23,26 @@ html {
   @media only screen and (max-width: 52.3em) {
     html {
       font-size: 45%; } }
+  @media only screen and (max-width: 25.88em) {
+    html {
+      font-size: 62%; } }
 
 body {
   max-height: 100vh; }
 
 .secondary-text-color {
-  color: black !important; }
+  color: var(--color-black) !important; }
 
 .secondary-background {
-  background-color: yellow !important;
+  background-color: var(--color-secondary-light) !important;
   border: 0.8rem solid var(--color-secondary-dark) !important; }
 
 .secondary-border {
   border: 0.8rem solid var(--color-secondary-dark); }
 
 .secondary-body-items {
-  color: black !important;
-  text-decoration-color: black !important; }
+  color: var(--color-black) !important;
+  text-decoration-color: var(--color-black) !important; }
 
 .card {
   display: grid;
@@ -43,8 +50,11 @@ body {
   background-color: var(--color-primary);
   padding: 2rem;
   border: 0.8rem solid var(--color-primary-light); }
+  @media only screen and (max-width: 25.88em) {
+    .card {
+      grid-template-columns: 1fr; } }
   .card__title {
-    color: white;
+    color: var(--color-white);
     text-transform: uppercase;
     font-size: 2rem;
     font-family: Arial;
@@ -58,12 +68,15 @@ body {
       padding-top: 0.6rem; }
       .card__body__items > * {
         text-decoration: underline;
-        text-decoration-color: var(--color-primary-light); }
+        text-decoration-color: var(--color-underline-blue); }
   .card__paragraph {
     font-size: 1.6rem;
     line-height: 2.5rem;
     color: white;
     opacity: 0.9; }
+    .card__paragraph--underline {
+      text-decoration: underline;
+      text-decoration-color: var(--color-underline-blue); }
   .card__img {
     display: block;
     margin: 0 auto;
@@ -92,12 +105,24 @@ body {
   @media only screen and (max-width: 52.3em) {
     .brands {
       grid-template-columns: repeat(5, minmax(14rem, 1fr));
-      column-gap: 1rem; } }
+      column-gap: 1rem;
+      padding: 3rem 1rem; } }
+  @media only screen and (max-width: 25.88em) {
+    .brands {
+      grid-template-columns: repeat(2, minmax(14rem, 1fr));
+      column-gap: 1rem;
+      row-gap: 1rem; } }
   .brands__title {
     grid-column: 1 / -1;
     align-self: center;
     text-transform: uppercase;
     font-size: 1.6rem; }
+    .brands__title span {
+      text-decoration: underline;
+      text-decoration-color: var(--color-black); }
+    @media only screen and (max-width: 25.88em) {
+      .brands__title {
+        text-align: center; } }
   .brands__logo {
     display: block;
     width: 100%; }
@@ -120,10 +145,13 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3rem 10rem;
-  background-color: white; }
+  background-color: var(--color-white); }
   @media only screen and (max-width: 52.3em) {
     .main {
       padding: 3rem 1rem; } }
+  @media only screen and (max-width: 25.88em) {
+    .main {
+      padding: 2rem 0; } }
 
 .container {
   display: grid;

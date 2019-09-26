@@ -1,10 +1,15 @@
 :root {
-  --color-primary: deepskyblue;
-  --color-primary-light: aqua;
-  --color-secondary-dark: yellowgreen;
+  --color-primary: #009efa;
+  --color-primary-light: #2ba6f0;
+  --color-secondary-light: #d4df24;
+  --color-secondary-dark: #e0ec24;
+  --color-underline-blue: #6bb1db;
+  --color-black: #000000;
+  --color-white: #ffffff;
 }
 
 $bp-tablet: 52.3em; // 768px
+$bp-mobile: 25.88em; // 414px
 
 * {
   margin: 0;
@@ -24,6 +29,10 @@ html {
 
   @media only screen and (max-width: $bp-tablet) {
     font-size: 45%;
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 62%;
   }
 }
 

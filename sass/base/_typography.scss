@@ -1,9 +1,9 @@
 .secondary-text-color {
-  color: black !important;
+  color: var(--color-black) !important;
 }
 
 .secondary-background {
-  background-color: yellow !important;
+  background-color: var(--color-secondary-light) !important;
   border: 0.8rem solid var(--color-secondary-dark) !important;
 }
 
@@ -12,6 +12,6 @@
 }
 
 .secondary-body-items {
-  color: black !important;
-  text-decoration-color: black !important;
+  color: var(--color-black) !important;
+  text-decoration-color: var(--color-black) !important;
 }
