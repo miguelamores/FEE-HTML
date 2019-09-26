@@ -36,6 +36,10 @@ body {
 .secondary-border {
   border: 0.8rem solid var(--color-secondary-dark); }
 
+.secondary-body-items {
+  color: black !important;
+  text-decoration-color: black !important; }
+
 .card {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
@@ -50,21 +54,24 @@ body {
     font-weight: 600;
     word-spacing: 0.4rem; }
   .card__body {
-    padding-top: 1rem; }
+    padding: 1rem 0; }
     .card__body__items {
       display: grid;
-      row-gap: 1rem; }
+      row-gap: 1rem;
+      padding-top: 0.6rem; }
       .card__body__items > * {
-        text-decoration: underline; }
+        text-decoration: underline;
+        text-decoration-color: var(--color-primary-light); }
   .card__paragraph {
-    padding-top: 1rem;
     font-size: 1.6rem;
     line-height: 2.5rem;
-    color: white; }
+    color: white;
+    opacity: 0.9; }
   .card__img {
     display: block;
     margin: 0 auto;
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 1rem; }
   .card__button {
     justify-self: end;
     align-self: end;
@@ -73,6 +80,9 @@ body {
     text-transform: uppercase;
     color: var(--color-primary);
     font-weight: 700; }
+    @media only screen and (max-width: 48em) {
+      .card__button {
+        width: 100%; } }
 
 .container {
   display: grid;
